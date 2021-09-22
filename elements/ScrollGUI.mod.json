@@ -1,0 +1,404 @@
+{
+  "_fv": 13,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #0",
+          "x": 150,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #1",
+          "x": 168,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spell_night_vision_16.png",
+          "use1Xscale": false,
+          "name": "spell_night_vision_16.png",
+          "x": 151,
+          "y": 108
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "spell_knockback_16.png",
+          "use1Xscale": false,
+          "name": "spell_knockback_16.png",
+          "x": 168,
+          "y": 108
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #2",
+          "x": 186,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #3",
+          "x": 204,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #4",
+          "x": 222,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #5",
+          "x": 240,
+          "y": 94
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #6",
+          "x": 258,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "»",
+          "width": 7,
+          "height": 20,
+          "name": "»",
+          "x": 286,
+          "y": 93
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:SurfaceSoul"
+          },
+          "id": 7,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #7",
+          "x": 131,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:NetherSoul"
+          },
+          "id": 8,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #8",
+          "x": 131,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:EndSoul"
+          },
+          "id": 9,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #9",
+          "x": 277,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:StrangeSoul"
+          },
+          "id": 10,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #10",
+          "x": 277,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "soul_end.png",
+          "use1Xscale": false,
+          "name": "soul_end.png",
+          "x": 278,
+          "y": 46
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "soul_nether.png",
+          "use1Xscale": false,
+          "name": "soul_nether.png",
+          "x": 132,
+          "y": 64
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "soul_other.png",
+          "use1Xscale": false,
+          "name": "soul_other.png",
+          "x": 277,
+          "y": 64
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "soul_surface.png",
+          "use1Xscale": false,
+          "name": "soul_surface.png",
+          "x": 132,
+          "y": 46
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 11,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #11",
+          "x": 204,
+          "y": 68
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_scroll.png",
+          "use1Xscale": false,
+          "name": "blank_scroll.png",
+          "x": 205,
+          "y": 68
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 12,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #12",
+          "x": 204,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 13,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "ScrollTableReset"
+          },
+          "name": "Slot #13",
+          "x": 174,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scroll_table_1.png",
+          "use1Xscale": false,
+          "name": "scroll_table_1.png",
+          "x": 170,
+          "y": 37
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 14,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onTakenFromSlot": {
+            "name": "OutputClearance"
+          },
+          "name": "Slot #14",
+          "x": 233,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scroll_table_2.png",
+          "use1Xscale": false,
+          "name": "scroll_table_2.png",
+          "x": 233,
+          "y": 37
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "knowledge_book.png",
+          "use1Xscale": true,
+          "name": "knowledge_book.png",
+          "x": 160,
+          "y": 19
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "scroll_table_3.png",
+          "use1Xscale": false,
+          "name": "scroll_table_3.png",
+          "x": 184,
+          "y": 10
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "knowledge_book.png",
+          "use1Xscale": true,
+          "name": "knowledge_book.png",
+          "x": 244,
+          "y": 19
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "ScrollGUINBTOpen"
+    },
+    "onClosed": {
+      "name": "ScrollGUINBTClosed"
+    }
+  }
+}

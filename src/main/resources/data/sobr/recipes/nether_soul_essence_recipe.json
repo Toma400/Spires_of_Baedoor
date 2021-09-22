@@ -1,0 +1,16 @@
+{
+  "group": "nether_soul_essence",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "sobr:nether_soul"
+    }
+  },
+  "result": {
+    "item": "wobr:nether_soul_essence",
+    "count": 2
+  }
+}

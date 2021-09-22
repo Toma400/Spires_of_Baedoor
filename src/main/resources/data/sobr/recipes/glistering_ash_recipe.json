@@ -1,0 +1,16 @@
+{
+  "group": "glistering_ash",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "sobr:end_soul"
+    }
+  },
+  "result": {
+    "item": "wobr:glistering_ash",
+    "count": 1
+  }
+}

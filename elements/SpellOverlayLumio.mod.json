@@ -1,0 +1,23 @@
+{
+  "_fv": 13,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "overlay_night_vision.png",
+          "use1Xscale": false,
+          "name": "overlay_night_vision.png",
+          "x": -109,
+          "y": -36
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "OverlaySpellConditionLumio"
+    }
+  }
+}

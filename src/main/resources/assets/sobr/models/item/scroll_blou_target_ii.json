@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "sobr:items/scroll_knockback_target"
+  }
+}

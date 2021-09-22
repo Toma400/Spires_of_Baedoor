@@ -1,0 +1,28 @@
+{
+  "_fv": 13,
+  "_type": "potion",
+  "definition": {
+    "name": "Spell Potion Lumio",
+    "effectName": "Spell Potion Lumio",
+    "icon": "overlay_night_vision.png",
+    "color": {
+      "value": -15595678,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "OverlaySpellConditionLumio"
+    },
+    "onActiveTick": {
+      "name": "ScrollUseLumioSelf"
+    },
+    "onExpired": {
+      "name": "OverlaySpellConditionLumio"
+    }
+  }
+}

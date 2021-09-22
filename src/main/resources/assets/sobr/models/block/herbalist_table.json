@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sobr:blocks/herbalist_table_bottom",
+    "up": "sobr:blocks/herbalist_table_top",
+    "north": "sobr:blocks/herbalist_table_front",
+    "east": "sobr:blocks/herbalist_table_side_1",
+    "south": "sobr:blocks/herbalist_table_back",
+    "west": "sobr:blocks/herbalist_table_side_2",
+    "particle": "sobr:blocks/herbalist_table_bottom"
+  }
+}

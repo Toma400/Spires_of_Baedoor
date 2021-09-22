@@ -1,0 +1,16 @@
+{
+  "group": "rotten_flesh",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "sobr:rotten_flesh_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:rotten_flesh",
+    "count": 9
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "herbalist_table",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "1": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "2": {
+      "item": "minecraft:mossy_cobblestone"
+    },
+    "3": {
+      "tag": "minecraft:planks"
+    },
+    "4": {
+      "tag": "minecraft:small_flowers"
+    },
+    "5": {
+      "tag": "minecraft:planks"
+    },
+    "6": {
+      "tag": "minecraft:planks"
+    },
+    "7": {
+      "tag": "minecraft:planks"
+    },
+    "8": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "sobr:herbalist_table",
+    "count": 1
+  }
+}

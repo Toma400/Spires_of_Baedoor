@@ -1,0 +1,33 @@
+{
+  "_fv": 13,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Soft Shivering",
+    "achievementDescription": "You felt some powers going slowly under your feet...",
+    "achievementIcon": {
+      "value": "CUSTOM:EmptyScroll"
+    },
+    "background": "test_3.png",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [
+      "GlisteringIceRecipe",
+      "RottenFleshBlockRecipe",
+      "RottenFleshBlockUnRecipe",
+      "HerbalistTableRecipe",
+      "EmptyScrollRecipe",
+      "NetherSoulEssenceRecipe",
+      "GlisteringAshRecipe"
+    ],
+    "rewardFunction": "No function",
+    "rewardXP": 1,
+    "achievementType": "task",
+    "parent": {
+      "value": "No parent: root"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"tick\" x=\"40\" y=\"47\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+  }
+}

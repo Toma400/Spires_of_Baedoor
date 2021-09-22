@@ -1,0 +1,35 @@
+{
+  "display": {
+    "background": "sobr:textures/test_3.png",
+    "icon": {
+      "item": "sobr:empty_scroll"
+    },
+    "title": {
+      "translate": "advancements.soft_shivering.title"
+    },
+    "description": {
+      "translate": "advancements.soft_shivering.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "soft_shivering": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "experience": 1,
+    "recipes": [
+      "sobr:glistering_ice_recipe",
+      "sobr:rotten_flesh_block_recipe",
+      "sobr:rotten_flesh_block_un_recipe",
+      "sobr:herbalist_table_recipe",
+      "sobr:empty_scroll_recipe",
+      "sobr:nether_soul_essence_recipe",
+      "sobr:glistering_ash_recipe"
+    ]
+  }
+}

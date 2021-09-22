@@ -1,0 +1,23 @@
+{
+  "_fv": 13,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "overlay_knockback.png",
+          "use1Xscale": false,
+          "name": "overlay_knockback.png",
+          "x": -108,
+          "y": -34
+        }
+      }
+    ],
+    "baseTexture": "",
+    "displayCondition": {
+      "name": "OverlaySpellConditionBlou"
+    }
+  }
+}

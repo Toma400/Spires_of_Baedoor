@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sobr:blocks/script_table_bottom",
+    "up": "sobr:blocks/script_table_top",
+    "north": "sobr:blocks/script_table_side1",
+    "east": "sobr:blocks/script_table_side",
+    "south": "sobr:blocks/script_table_side2",
+    "west": "sobr:blocks/script_table_side",
+    "particle": "sobr:blocks/script_table_bottom"
+  }
+}

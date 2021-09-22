@@ -1,0 +1,42 @@
+{
+  "group": "empty_scroll",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:paper"
+    },
+    "1": {
+      "item": "minecraft:paper"
+    },
+    "2": {
+      "item": "minecraft:paper"
+    },
+    "3": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "4": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "5": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "6": {
+      "item": "minecraft:paper"
+    },
+    "7": {
+      "item": "minecraft:paper"
+    },
+    "8": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "sobr:empty_scroll",
+    "count": 1
+  }
+}

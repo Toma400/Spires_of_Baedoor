@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 2,
+    "group": "glistering_ice",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.LIGHT_GRAY_BED"
+      },
+      {
+        "value": "Blocks.ICE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.ICE"
+      },
+      {
+        "value": "Blocks.LIGHT_GRAY_BED"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GlisteringIce"
+    },
+    "name": "glistering_ice_recipe",
+    "namespace": "mod"
+  }
+}

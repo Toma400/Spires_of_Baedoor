@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "scroll_table",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.CARPET#2"
+      },
+      {
+        "value": "Blocks.CARPET#2"
+      },
+      {
+        "value": "Blocks.CARPET#2"
+      },
+      {
+        "value": "Blocks.PLANKS"
+      },
+      {
+        "value": "CUSTOM:EmptyScroll"
+      },
+      {
+        "value": "Blocks.PLANKS"
+      },
+      {
+        "value": "Blocks.PLANKS"
+      },
+      {
+        "value": "Blocks.PLANKS"
+      },
+      {
+        "value": "Blocks.PLANKS"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ScrollTable"
+    },
+    "name": "scroll_table_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sobr:blocks/glistering_ice",
+    "particle": "sobr:blocks/glistering_ice"
+  }
+}

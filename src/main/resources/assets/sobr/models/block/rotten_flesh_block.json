@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "sobr:blocks/block_of_rotten_flesh",
+    "up": "sobr:blocks/block_of_rotten_flesh",
+    "north": "sobr:blocks/block_of_rotten_flesh",
+    "east": "sobr:blocks/block_of_rotten_flesh",
+    "south": "sobr:blocks/block_of_rotten_flesh",
+    "west": "sobr:blocks/block_of_rotten_flesh",
+    "particle": "sobr:blocks/block_of_rotten_flesh"
+  }
+}

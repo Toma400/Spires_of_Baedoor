@@ -1,0 +1,26 @@
+{
+  "group": "glistering_ice",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "wobr:glistering_ash"
+    },
+    "1": {
+      "item": "minecraft:ice"
+    },
+    "2": {
+      "item": "minecraft:ice"
+    },
+    "3": {
+      "item": "wobr:glistering_ash"
+    }
+  },
+  "result": {
+    "item": "sobr:glistering_ice",
+    "count": 2
+  }
+}
