@@ -3,10 +3,10 @@
   "textures": {
     "down": "sobr:blocks/ruinic_stone",
     "up": "sobr:blocks/ruinic_stone",
-    "north": "sobr:blocks/ruinic_stone",
-    "east": "sobr:blocks/ruinic_stone",
-    "south": "sobr:blocks/ruinic_stone",
-    "west": "sobr:blocks/ruinic_stone",
+    "north": "sobr:blocks/test_a",
+    "east": "sobr:blocks/test_a",
+    "south": "sobr:blocks/test_a",
+    "west": "sobr:blocks/test_a",
     "particle": "sobr:blocks/ruinic_stone"
   }
 }

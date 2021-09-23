@@ -932,6 +932,44 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "runic_spire_fire"
+    },
+    {
+      "name": "RunicStoneEffectFire",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "runic_stone_effect_fire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RunicSpireIce",
+      "type": "structure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "runic_spire_ice"
     }
   ],
   "variable_elements": [
