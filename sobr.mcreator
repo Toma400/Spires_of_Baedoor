@@ -923,6 +923,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "rune_spire_empty_test"
+    },
+    {
+      "name": "RunicSpireFire",
+      "type": "structure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "runic_spire_fire"
     }
   ],
   "variable_elements": [
@@ -976,8 +985,8 @@
       "block.sobr.glistering_ice": "Glistering Ice",
       "item.sobr.scroll_blou_self_iii": "Blou",
       "item.sobr.scroll_lumio_field_i": "Lumio",
-      "block.sobr.empty_runic_stone": "Empty Runic Stone",
       "item.sobr.scroll_blou_target_i": "Blou",
+      "block.sobr.empty_runic_stone": "Empty Runic Stone",
       "effect.spell_potion_lumio": "Spell Potion Lumio",
       "block.sobr.runic_stone_earth": "Earth Runic Stone",
       "block.sobr.smooth_runic_stone": "Smooth Runic Stone",
