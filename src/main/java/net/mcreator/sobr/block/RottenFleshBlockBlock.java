@@ -24,7 +24,7 @@ public class RottenFleshBlockBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:rotten_flesh_block")
 	public static final Block block = null;
 	public RottenFleshBlockBlock(SobrModElements instance) {
-		super(instance, 3);
+		super(instance, 11);
 	}
 
 	@Override

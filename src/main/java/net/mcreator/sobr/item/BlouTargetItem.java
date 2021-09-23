@@ -43,7 +43,7 @@ public class BlouTargetItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:entitybulletblou_target")
 	public static final EntityType arrow = null;
 	public BlouTargetItem(SobrModElements instance) {
-		super(instance, 56);
+		super(instance, 64);
 	}
 
 	@Override

@@ -72,7 +72,7 @@ public class ScrollTableBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:scroll_table")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ScrollTableBlock(SobrModElements instance) {
-		super(instance, 1);
+		super(instance, 9);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

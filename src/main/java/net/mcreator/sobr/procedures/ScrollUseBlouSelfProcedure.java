@@ -20,7 +20,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollUseBlouSelfProcedure extends SobrModElements.ModElement {
 	public ScrollUseBlouSelfProcedure(SobrModElements instance) {
-		super(instance, 61);
+		super(instance, 69);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

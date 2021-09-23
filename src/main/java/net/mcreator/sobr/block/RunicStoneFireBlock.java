@@ -24,7 +24,7 @@ public class RunicStoneFireBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:runic_stone_fire")
 	public static final Block block = null;
 	public RunicStoneFireBlock(SobrModElements instance) {
-		super(instance, 67);
+		super(instance, 1);
 	}
 
 	@Override

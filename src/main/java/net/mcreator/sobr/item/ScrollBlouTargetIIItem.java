@@ -34,7 +34,7 @@ public class ScrollBlouTargetIIItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:scroll_blou_target_ii")
 	public static final Item block = null;
 	public ScrollBlouTargetIIItem(SobrModElements instance) {
-		super(instance, 27);
+		super(instance, 35);
 	}
 
 	@Override

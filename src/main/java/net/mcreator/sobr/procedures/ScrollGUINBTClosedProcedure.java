@@ -9,7 +9,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollGUINBTClosedProcedure extends SobrModElements.ModElement {
 	public ScrollGUINBTClosedProcedure(SobrModElements instance) {
-		super(instance, 41);
+		super(instance, 49);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

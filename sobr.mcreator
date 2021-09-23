@@ -4,7 +4,7 @@
     {
       "name": "GlisteringIce",
       "type": "block",
-      "sortid": 4,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -13,7 +13,7 @@
     {
       "name": "GlisteringIceRecipe",
       "type": "recipe",
-      "sortid": 29,
+      "sortid": 37,
       "compiles": true,
       "locked_code": true,
       "ids": {},
@@ -22,7 +22,7 @@
     {
       "name": "GlisteringIceBreak",
       "type": "procedure",
-      "sortid": 30,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -51,7 +51,7 @@
     {
       "name": "RottenFleshBlock",
       "type": "block",
-      "sortid": 3,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -60,7 +60,7 @@
     {
       "name": "RottenFleshBlockRecipe",
       "type": "recipe",
-      "sortid": 31,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -69,7 +69,7 @@
     {
       "name": "RottenFleshBlockUnRecipe",
       "type": "recipe",
-      "sortid": 32,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -78,7 +78,7 @@
     {
       "name": "HerbalistTable",
       "type": "block",
-      "sortid": 2,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -87,7 +87,7 @@
     {
       "name": "HerbalistTableRecipe",
       "type": "recipe",
-      "sortid": 33,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -96,7 +96,7 @@
     {
       "name": "EmptyScroll",
       "type": "item",
-      "sortid": 9,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -105,7 +105,7 @@
     {
       "name": "EmptyScrollRecipe",
       "type": "recipe",
-      "sortid": 34,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -114,7 +114,7 @@
     {
       "name": "SpiresofBaedoor",
       "type": "tab",
-      "sortid": 35,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -123,7 +123,7 @@
     {
       "name": "ScrollLumioSelfI",
       "type": "tool",
-      "sortid": 10,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -132,7 +132,7 @@
     {
       "name": "SurfaceSoul",
       "type": "item",
-      "sortid": 5,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -141,7 +141,7 @@
     {
       "name": "NetherSoul",
       "type": "item",
-      "sortid": 6,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -150,7 +150,7 @@
     {
       "name": "EndSoul",
       "type": "item",
-      "sortid": 7,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -159,7 +159,7 @@
     {
       "name": "StrangeSoul",
       "type": "item",
-      "sortid": 8,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -168,7 +168,7 @@
     {
       "name": "SoulsDrop",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -201,7 +201,7 @@
     {
       "name": "NetherSoulEssenceRecipe",
       "type": "recipe",
-      "sortid": 37,
+      "sortid": 45,
       "compiles": true,
       "locked_code": true,
       "ids": {},
@@ -210,7 +210,7 @@
     {
       "name": "GlisteringAshRecipe",
       "type": "recipe",
-      "sortid": 38,
+      "sortid": 46,
       "compiles": true,
       "locked_code": true,
       "ids": {},
@@ -219,7 +219,7 @@
     {
       "name": "ScrollGUI",
       "type": "gui",
-      "sortid": 39,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -228,7 +228,7 @@
     {
       "name": "ScrollGUINBTOpen",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -245,7 +245,7 @@
     {
       "name": "ScrollGUINBTClosed",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -262,7 +262,7 @@
     {
       "name": "ScrollTableUse",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -279,7 +279,7 @@
     {
       "name": "OutputClearance",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -296,7 +296,7 @@
     {
       "name": "ScrollGemSelf",
       "type": "tag",
-      "sortid": 44,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -305,7 +305,7 @@
     {
       "name": "ScrollGemTarget",
       "type": "tag",
-      "sortid": 45,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -314,7 +314,7 @@
     {
       "name": "ScrollGemField",
       "type": "tag",
-      "sortid": 46,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -323,7 +323,7 @@
     {
       "name": "ScrollLumioSelfII",
       "type": "tool",
-      "sortid": 11,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -332,7 +332,7 @@
     {
       "name": "ScrollLumioSelfIII",
       "type": "tool",
-      "sortid": 12,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -341,7 +341,7 @@
     {
       "name": "ScrollLumioSelfIV",
       "type": "tool",
-      "sortid": 13,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -350,7 +350,7 @@
     {
       "name": "ScrollLumioSelfV",
       "type": "tool",
-      "sortid": 14,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -359,7 +359,7 @@
     {
       "name": "ScrollLumioTargetI",
       "type": "tool",
-      "sortid": 15,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -368,7 +368,7 @@
     {
       "name": "ScrollLumioTargetII",
       "type": "tool",
-      "sortid": 16,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -377,7 +377,7 @@
     {
       "name": "ScrollLumioTargetIII",
       "type": "tool",
-      "sortid": 17,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -386,7 +386,7 @@
     {
       "name": "ScrollLumioTargetIV",
       "type": "tool",
-      "sortid": 18,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -395,7 +395,7 @@
     {
       "name": "ScrollLumioTargetV",
       "type": "tool",
-      "sortid": 19,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -404,7 +404,7 @@
     {
       "name": "ScrollLumioFieldI",
       "type": "tool",
-      "sortid": 20,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -413,7 +413,7 @@
     {
       "name": "ScrollLumioFieldII",
       "type": "tool",
-      "sortid": 21,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -422,7 +422,7 @@
     {
       "name": "ScrollLumioFieldIII",
       "type": "tool",
-      "sortid": 22,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -431,7 +431,7 @@
     {
       "name": "ScrollBlouSelfI",
       "type": "tool",
-      "sortid": 23,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -440,7 +440,7 @@
     {
       "name": "ScrollBlouSelfII",
       "type": "tool",
-      "sortid": 24,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -449,7 +449,7 @@
     {
       "name": "ScrollBlouSelfIII",
       "type": "tool",
-      "sortid": 25,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -458,7 +458,7 @@
     {
       "name": "ScrollBlouTargetI",
       "type": "tool",
-      "sortid": 26,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -467,7 +467,7 @@
     {
       "name": "ScrollBlouTargetII",
       "type": "tool",
-      "sortid": 27,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -476,7 +476,7 @@
     {
       "name": "ScrollBlouTargetIII",
       "type": "tool",
-      "sortid": 28,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -485,7 +485,7 @@
     {
       "name": "SpellOverlayLumio",
       "type": "overlay",
-      "sortid": 47,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -494,7 +494,7 @@
     {
       "name": "SpellOverlayBlou",
       "type": "overlay",
-      "sortid": 48,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -503,7 +503,7 @@
     {
       "name": "SpellPotionLumio",
       "type": "potion",
-      "sortid": 49,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -512,7 +512,7 @@
     {
       "name": "SpellPotionBlou",
       "type": "potion",
-      "sortid": 50,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -521,7 +521,7 @@
     {
       "name": "OverlaySpellConditionLumio",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -539,7 +539,7 @@
     {
       "name": "OverlaySpellConditionBlou",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -557,7 +557,7 @@
     {
       "name": "ScrollUseLumioSelfPre",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -594,7 +594,7 @@
     {
       "name": "ScrollUseLumioSelf",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -627,7 +627,7 @@
     {
       "name": "ScrollUseBlouTarget",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -664,7 +664,7 @@
     {
       "name": "BlouTarget",
       "type": "gun",
-      "sortid": 56,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -673,7 +673,7 @@
     {
       "name": "ScrollUseLumioField",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -710,7 +710,7 @@
     {
       "name": "ScrollUseLumioTarget",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -735,7 +735,7 @@
     {
       "name": "ScrollUseLumioTargetObtain",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -756,7 +756,7 @@
     {
       "name": "LumioTarget",
       "type": "gun",
-      "sortid": 60,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -765,7 +765,7 @@
     {
       "name": "ScrollUseBlouSelf",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -802,7 +802,7 @@
     {
       "name": "ScrollTableReset",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -819,7 +819,7 @@
     {
       "name": "ScrollTable",
       "type": "block",
-      "sortid": 1,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -828,7 +828,7 @@
     {
       "name": "SoftShivering",
       "type": "achievement",
-      "sortid": 63,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -837,7 +837,7 @@
     {
       "name": "ScrollTableRecipe",
       "type": "recipe",
-      "sortid": 64,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -846,7 +846,7 @@
     {
       "name": "SmoothRunicStone",
       "type": "block",
-      "sortid": 65,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -855,7 +855,7 @@
     {
       "name": "EmptyRunicStone",
       "type": "block",
-      "sortid": 66,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -864,7 +864,7 @@
     {
       "name": "RunicStoneFire",
       "type": "block",
-      "sortid": 67,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -873,7 +873,7 @@
     {
       "name": "RunicStoneIce",
       "type": "block",
-      "sortid": 68,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -882,7 +882,7 @@
     {
       "name": "RunicStoneAir",
       "type": "block",
-      "sortid": 69,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -891,7 +891,7 @@
     {
       "name": "RunicStoneWater",
       "type": "block",
-      "sortid": 70,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -900,7 +900,7 @@
     {
       "name": "RunicStoneEarth",
       "type": "block",
-      "sortid": 71,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -909,7 +909,7 @@
     {
       "name": "RunicStoneSoul",
       "type": "block",
-      "sortid": 72,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -976,8 +976,8 @@
       "block.sobr.glistering_ice": "Glistering Ice",
       "item.sobr.scroll_blou_self_iii": "Blou",
       "item.sobr.scroll_lumio_field_i": "Lumio",
-      "item.sobr.scroll_blou_target_i": "Blou",
       "block.sobr.empty_runic_stone": "Empty Runic Stone",
+      "item.sobr.scroll_blou_target_i": "Blou",
       "effect.spell_potion_lumio": "Spell Potion Lumio",
       "block.sobr.runic_stone_earth": "Earth Runic Stone",
       "block.sobr.smooth_runic_stone": "Smooth Runic Stone",

@@ -15,7 +15,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class OutputClearanceProcedure extends SobrModElements.ModElement {
 	public OutputClearanceProcedure(SobrModElements instance) {
-		super(instance, 43);
+		super(instance, 51);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

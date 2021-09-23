@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SobrModElements.ModElement.Tag
 public class SoulsDropProcedure extends SobrModElements.ModElement {
 	public SoulsDropProcedure(SobrModElements instance) {
-		super(instance, 36);
+		super(instance, 44);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

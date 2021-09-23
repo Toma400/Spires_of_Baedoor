@@ -24,7 +24,7 @@ public class RunicStoneSoulBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:runic_stone_soul")
 	public static final Block block = null;
 	public RunicStoneSoulBlock(SobrModElements instance) {
-		super(instance, 72);
+		super(instance, 6);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ public class SmoothRunicStoneBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:smooth_runic_stone")
 	public static final Block block = null;
 	public SmoothRunicStoneBlock(SobrModElements instance) {
-		super(instance, 65);
+		super(instance, 8);
 	}
 
 	@Override

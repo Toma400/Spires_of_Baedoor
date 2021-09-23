@@ -24,7 +24,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollUseLumioSelfPreProcedure extends SobrModElements.ModElement {
 	public ScrollUseLumioSelfPreProcedure(SobrModElements instance) {
-		super(instance, 53);
+		super(instance, 61);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

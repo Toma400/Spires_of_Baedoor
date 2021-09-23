@@ -24,7 +24,7 @@ public class RunicStoneEarthBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:runic_stone_earth")
 	public static final Block block = null;
 	public RunicStoneEarthBlock(SobrModElements instance) {
-		super(instance, 71);
+		super(instance, 5);
 	}
 
 	@Override

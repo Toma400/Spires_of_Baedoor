@@ -22,7 +22,7 @@ public class NetherSoulItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:nether_soul")
 	public static final Item block = null;
 	public NetherSoulItem(SobrModElements instance) {
-		super(instance, 6);
+		super(instance, 14);
 	}
 
 	@Override

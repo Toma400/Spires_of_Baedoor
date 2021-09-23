@@ -46,7 +46,7 @@ public class LumioTargetItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:entitybulletlumio_target")
 	public static final EntityType arrow = null;
 	public LumioTargetItem(SobrModElements instance) {
-		super(instance, 60);
+		super(instance, 68);
 	}
 
 	@Override

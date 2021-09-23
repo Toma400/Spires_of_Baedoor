@@ -61,7 +61,7 @@ public class GlisteringIceBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:glistering_ice")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public GlisteringIceBlock(SobrModElements instance) {
-		super(instance, 4);
+		super(instance, 12);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

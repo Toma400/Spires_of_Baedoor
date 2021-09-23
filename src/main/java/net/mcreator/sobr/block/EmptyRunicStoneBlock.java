@@ -24,7 +24,7 @@ public class EmptyRunicStoneBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:empty_runic_stone")
 	public static final Block block = null;
 	public EmptyRunicStoneBlock(SobrModElements instance) {
-		super(instance, 66);
+		super(instance, 7);
 	}
 
 	@Override

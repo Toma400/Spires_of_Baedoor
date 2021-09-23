@@ -28,7 +28,7 @@ public class ScrollBlouSelfIItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:scroll_blou_self_i")
 	public static final Item block = null;
 	public ScrollBlouSelfIItem(SobrModElements instance) {
-		super(instance, 23);
+		super(instance, 31);
 	}
 
 	@Override

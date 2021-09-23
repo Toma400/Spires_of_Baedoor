@@ -34,7 +34,7 @@ public class ScrollLumioFieldIIIItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:scroll_lumio_field_iii")
 	public static final Item block = null;
 	public ScrollLumioFieldIIIItem(SobrModElements instance) {
-		super(instance, 22);
+		super(instance, 30);
 	}
 
 	@Override

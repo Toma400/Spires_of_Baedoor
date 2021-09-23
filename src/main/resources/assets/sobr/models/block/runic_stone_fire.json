@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "sobr:blocks/test_a",
-    "up": "sobr:blocks/test_a",
-    "north": "sobr:blocks/test_a",
-    "east": "sobr:blocks/test_a",
-    "south": "sobr:blocks/test_a",
-    "west": "sobr:blocks/test_a",
-    "particle": "sobr:blocks/test_a"
+    "down": "sobr:blocks/ruinic_stone",
+    "up": "sobr:blocks/ruinic_stone",
+    "north": "sobr:blocks/ruinic_stone_fire",
+    "east": "sobr:blocks/ruinic_stone_fire",
+    "south": "sobr:blocks/ruinic_stone_fire",
+    "west": "sobr:blocks/ruinic_stone_fire",
+    "particle": "sobr:blocks/ruinic_stone"
   }
 }

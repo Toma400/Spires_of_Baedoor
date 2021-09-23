@@ -49,7 +49,7 @@ import java.util.HashMap;
 @SobrModElements.ModElement.Tag
 public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 	public ScrollTableUseProcedure(SobrModElements instance) {
-		super(instance, 42);
+		super(instance, 50);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

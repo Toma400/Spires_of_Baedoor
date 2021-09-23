@@ -22,7 +22,7 @@ public class EmptyScrollItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:empty_scroll")
 	public static final Item block = null;
 	public EmptyScrollItem(SobrModElements instance) {
-		super(instance, 9);
+		super(instance, 17);
 	}
 
 	@Override

@@ -15,7 +15,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollTableResetProcedure extends SobrModElements.ModElement {
 	public ScrollTableResetProcedure(SobrModElements instance) {
-		super(instance, 62);
+		super(instance, 70);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

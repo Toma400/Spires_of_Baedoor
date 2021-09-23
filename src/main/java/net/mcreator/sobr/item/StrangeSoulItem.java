@@ -22,7 +22,7 @@ public class StrangeSoulItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:strange_soul")
 	public static final Item block = null;
 	public StrangeSoulItem(SobrModElements instance) {
-		super(instance, 8);
+		super(instance, 16);
 	}
 
 	@Override

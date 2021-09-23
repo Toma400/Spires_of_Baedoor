@@ -34,7 +34,7 @@ public class ScrollLumioTargetVItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:scroll_lumio_target_v")
 	public static final Item block = null;
 	public ScrollLumioTargetVItem(SobrModElements instance) {
-		super(instance, 19);
+		super(instance, 27);
 	}
 
 	@Override

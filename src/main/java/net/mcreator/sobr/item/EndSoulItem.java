@@ -22,7 +22,7 @@ public class EndSoulItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:end_soul")
 	public static final Item block = null;
 	public EndSoulItem(SobrModElements instance) {
-		super(instance, 7);
+		super(instance, 15);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollUseLumioTargetProcedure extends SobrModElements.ModElement {
 	public ScrollUseLumioTargetProcedure(SobrModElements instance) {
-		super(instance, 58);
+		super(instance, 66);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

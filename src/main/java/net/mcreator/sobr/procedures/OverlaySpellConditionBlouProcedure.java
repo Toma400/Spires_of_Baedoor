@@ -13,7 +13,7 @@ import java.util.Collection;
 @SobrModElements.ModElement.Tag
 public class OverlaySpellConditionBlouProcedure extends SobrModElements.ModElement {
 	public OverlaySpellConditionBlouProcedure(SobrModElements instance) {
-		super(instance, 52);
+		super(instance, 60);
 	}
 
 	public static boolean executeProcedure(Map<String, Object> dependencies) {

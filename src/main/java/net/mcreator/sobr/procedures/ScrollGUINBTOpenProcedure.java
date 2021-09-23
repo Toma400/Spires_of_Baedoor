@@ -9,7 +9,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class ScrollGUINBTOpenProcedure extends SobrModElements.ModElement {
 	public ScrollGUINBTOpenProcedure(SobrModElements instance) {
-		super(instance, 40);
+		super(instance, 48);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

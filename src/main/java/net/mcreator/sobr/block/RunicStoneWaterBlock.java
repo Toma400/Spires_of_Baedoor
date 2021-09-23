@@ -24,7 +24,7 @@ public class RunicStoneWaterBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:runic_stone_water")
 	public static final Block block = null;
 	public RunicStoneWaterBlock(SobrModElements instance) {
-		super(instance, 70);
+		super(instance, 4);
 	}
 
 	@Override

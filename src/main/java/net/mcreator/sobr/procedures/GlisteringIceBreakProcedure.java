@@ -12,7 +12,7 @@ import java.util.Map;
 @SobrModElements.ModElement.Tag
 public class GlisteringIceBreakProcedure extends SobrModElements.ModElement {
 	public GlisteringIceBreakProcedure(SobrModElements instance) {
-		super(instance, 30);
+		super(instance, 38);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

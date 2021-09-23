@@ -23,7 +23,7 @@ import com.google.common.collect.ImmutableMap;
 @SobrModElements.ModElement.Tag
 public class SpellOverlayLumioOverlay extends SobrModElements.ModElement {
 	public SpellOverlayLumioOverlay(SobrModElements instance) {
-		super(instance, 47);
+		super(instance, 55);
 	}
 
 	@Override

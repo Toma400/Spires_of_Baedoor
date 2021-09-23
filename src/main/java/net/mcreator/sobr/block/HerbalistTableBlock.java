@@ -64,7 +64,7 @@ public class HerbalistTableBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:herbalist_table")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public HerbalistTableBlock(SobrModElements instance) {
-		super(instance, 2);
+		super(instance, 10);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

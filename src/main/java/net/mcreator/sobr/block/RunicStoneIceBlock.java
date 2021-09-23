@@ -24,7 +24,7 @@ public class RunicStoneIceBlock extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:runic_stone_ice")
 	public static final Block block = null;
 	public RunicStoneIceBlock(SobrModElements instance) {
-		super(instance, 68);
+		super(instance, 2);
 	}
 
 	@Override

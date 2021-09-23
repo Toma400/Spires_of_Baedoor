@@ -20,7 +20,7 @@ import java.util.Collection;
 @SobrModElements.ModElement.Tag
 public class ScrollUseLumioSelfProcedure extends SobrModElements.ModElement {
 	public ScrollUseLumioSelfProcedure(SobrModElements instance) {
-		super(instance, 54);
+		super(instance, 62);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

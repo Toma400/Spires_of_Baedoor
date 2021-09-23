@@ -22,7 +22,7 @@ public class SurfaceSoulItem extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:surface_soul")
 	public static final Item block = null;
 	public SurfaceSoulItem(SobrModElements instance) {
-		super(instance, 5);
+		super(instance, 13);
 	}
 
 	@Override

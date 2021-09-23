@@ -26,7 +26,7 @@ public class SpellPotionBlouPotion extends SobrModElements.ModElement {
 	@ObjectHolder("sobr:spell_potion_blou")
 	public static final Effect potion = null;
 	public SpellPotionBlouPotion(SobrModElements instance) {
-		super(instance, 50);
+		super(instance, 58);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -13,7 +13,7 @@ import net.mcreator.sobr.SobrModElements;
 @SobrModElements.ModElement.Tag
 public class SpiresofBaedoorItemGroup extends SobrModElements.ModElement {
 	public SpiresofBaedoorItemGroup(SobrModElements instance) {
-		super(instance, 35);
+		super(instance, 43);
 	}
 
 	@Override
