@@ -914,6 +914,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "runic_stone_soul"
+    },
+    {
+      "name": "RuneSpireEmptyTest",
+      "type": "structure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rune_spire_empty_test"
     }
   ],
   "variable_elements": [
