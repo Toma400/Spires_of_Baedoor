@@ -7,22 +7,22 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
-import net.mcreator.sobr.block.RunicStoneFireBlock;
+import net.mcreator.sobr.item.EmptyScrollItem;
 import net.mcreator.sobr.SobrModElements;
 
 @SobrModElements.ModElement.Tag
-public class SpiresofBaedoorItemGroup extends SobrModElements.ModElement {
-	public SpiresofBaedoorItemGroup(SobrModElements instance) {
-		super(instance, 43);
+public class ScrollsofBaedoorItemGroup extends SobrModElements.ModElement {
+	public ScrollsofBaedoorItemGroup(SobrModElements instance) {
+		super(instance, 78);
 	}
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabspiresof_baedoor") {
+		tab = new ItemGroup("tabscrollsof_baedoor") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(RunicStoneFireBlock.block, (int) (1));
+				return new ItemStack(EmptyScrollItem.block, (int) (1));
 			}
 
 			@OnlyIn(Dist.CLIENT)

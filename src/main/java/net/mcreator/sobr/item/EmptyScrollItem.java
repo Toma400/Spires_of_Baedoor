@@ -12,7 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.sobr.itemgroup.SpiresofBaedoorItemGroup;
+import net.mcreator.sobr.itemgroup.ScrollsofBaedoorItemGroup;
 import net.mcreator.sobr.SobrModElements;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class EmptyScrollItem extends SobrModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SpiresofBaedoorItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(ScrollsofBaedoorItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("empty_scroll");
 		}
 

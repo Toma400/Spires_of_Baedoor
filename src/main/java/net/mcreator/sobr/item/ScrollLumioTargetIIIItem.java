@@ -20,7 +20,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.sobr.procedures.ScrollUseLumioTargetProcedure;
-import net.mcreator.sobr.itemgroup.SpiresofBaedoorItemGroup;
+import net.mcreator.sobr.itemgroup.ScrollsofBaedoorItemGroup;
 import net.mcreator.sobr.SobrModElements;
 
 import java.util.Map;
@@ -69,7 +69,7 @@ public class ScrollLumioTargetIIIItem extends SobrModElements.ModElement {
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
-			super(new Item.Properties().group(SpiresofBaedoorItemGroup.tab).maxDamage(0));
+			super(new Item.Properties().group(ScrollsofBaedoorItemGroup.tab).maxDamage(0));
 		}
 
 		@Override
