@@ -22,7 +22,7 @@ public class SpiresofBaedoorItemGroup extends SobrModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(RunicStoneFireBlock.block, (int) (1));
+				return new ItemStack(RunicStoneFireBlock.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

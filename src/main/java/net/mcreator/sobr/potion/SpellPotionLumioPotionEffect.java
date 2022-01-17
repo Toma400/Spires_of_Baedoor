@@ -2,7 +2,7 @@
 package net.mcreator.sobr.potion;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
@@ -11,40 +11,35 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effect;
-import net.minecraft.entity.ai.attributes.AbstractAttributeMap;
+import net.minecraft.entity.ai.attributes.AttributeModifierManager;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.sobr.procedures.OverlaySpellConditionBlouProcedure;
-import net.mcreator.sobr.SobrModElements;
+import net.mcreator.sobr.procedures.ScrollUseLumioSelfProcedure;
+import net.mcreator.sobr.procedures.OverlaySpellConditionLumioProcedure;
 
 import java.util.Map;
 import java.util.HashMap;
 
-@SobrModElements.ModElement.Tag
-public class SpellPotionBlouPotion extends SobrModElements.ModElement {
-	@ObjectHolder("sobr:spell_potion_blou")
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class SpellPotionLumioPotionEffect {
+	@ObjectHolder("sobr:spell_potion_lumio")
 	public static final Effect potion = null;
-	public SpellPotionBlouPotion(SobrModElements instance) {
-		super(instance, 58);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
-	}
-
 	@SubscribeEvent
-	public void registerEffect(RegistryEvent.Register<Effect> event) {
+	public static void registerEffect(RegistryEvent.Register<Effect> event) {
 		event.getRegistry().register(new EffectCustom());
 	}
 	public static class EffectCustom extends Effect {
 		private final ResourceLocation potionIcon;
 		public EffectCustom() {
 			super(EffectType.NEUTRAL, -15595678);
-			setRegistryName("spell_potion_blou");
+			setRegistryName("spell_potion_lumio");
 			potionIcon = new ResourceLocation("sobr:textures/overlay_night_vision.png");
 		}
 
 		@Override
 		public String getName() {
-			return "effect.spell_potion_blou";
+			return "effect.spell_potion_lumio";
 		}
 
 		@Override
@@ -75,27 +70,44 @@ public class SpellPotionBlouPotion extends SobrModElements.ModElement {
 		@Override
 		public void affectEntity(Entity source, Entity indirectSource, LivingEntity entity, int amplifier, double health) {
 			World world = entity.world;
-			double x = entity.posX;
-			double y = entity.posY;
-			double z = entity.posZ;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				OverlaySpellConditionBlouProcedure.executeProcedure($_dependencies);
+				OverlaySpellConditionLumioProcedure.executeProcedure($_dependencies);
 			}
 		}
 
 		@Override
-		public void removeAttributesModifiersFromEntity(LivingEntity entity, AbstractAttributeMap attributeMapIn, int amplifier) {
-			super.removeAttributesModifiersFromEntity(entity, attributeMapIn, amplifier);
+		public void performEffect(LivingEntity entity, int amplifier) {
 			World world = entity.world;
-			double x = entity.posX;
-			double y = entity.posY;
-			double z = entity.posZ;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				OverlaySpellConditionBlouProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ScrollUseLumioSelfProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void removeAttributesModifiersFromEntity(LivingEntity entity, AttributeModifierManager attributeMapIn, int amplifier) {
+			super.removeAttributesModifiersFromEntity(entity, attributeMapIn, amplifier);
+			World world = entity.world;
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				OverlaySpellConditionLumioProcedure.executeProcedure($_dependencies);
 			}
 		}
 

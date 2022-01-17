@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 24,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -25,6 +25,7 @@
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedInAir": {

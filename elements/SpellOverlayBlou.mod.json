@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 24,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
@@ -16,8 +16,16 @@
       }
     ],
     "baseTexture": "",
+    "overlayTarget": "Ingame",
     "displayCondition": {
       "name": "OverlaySpellConditionBlou"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
     }
   }
 }

@@ -1,8 +1,6 @@
 
 package net.mcreator.sobr.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -17,9 +15,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.item.ItemStack;
@@ -30,10 +26,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.Minecraft;
 
 import net.mcreator.sobr.procedures.ScrollTableResetProcedure;
 import net.mcreator.sobr.procedures.ScrollGUINBTOpenProcedure;
@@ -61,17 +54,17 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("scroll_gui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("scroll_gui"));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, ScrollGUIGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -80,9 +73,9 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 	}
 
 	public static class GuiContainerMod extends Container implements Supplier<Map<Integer, Slot>> {
-		private World world;
-		private PlayerEntity entity;
-		private int x, y, z;
+		World world;
+		PlayerEntity entity;
+		int x, y, z;
 		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
 		private boolean bound = false;
@@ -194,7 +187,7 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(SurfaceSoulItem.block, (int) (1)).getItem() == stack.getItem());
+					return (SurfaceSoulItem.block == stack.getItem());
 				}
 			}));
 			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 6, 26) {
@@ -207,7 +200,7 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(NetherSoulItem.block, (int) (1)).getItem() == stack.getItem());
+					return (NetherSoulItem.block == stack.getItem());
 				}
 			}));
 			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 152, 8) {
@@ -220,7 +213,7 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(EndSoulItem.block, (int) (1)).getItem() == stack.getItem());
+					return (EndSoulItem.block == stack.getItem());
 				}
 			}));
 			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 152, 26) {
@@ -233,7 +226,7 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(StrangeSoulItem.block, (int) (1)).getItem() == stack.getItem());
+					return (StrangeSoulItem.block == stack.getItem());
 				}
 			}));
 			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 79, 32) {
@@ -437,101 +430,10 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 		}
 
 		private void slotChanged(int slotid, int ctype, int meta) {
-			if (this.world != null && this.world.isRemote) {
+			if (this.world != null && this.world.isRemote()) {
 				SobrMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
-		}
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static class GuiWindow extends ContainerScreen<GuiContainerMod> {
-		private World world;
-		private int x, y, z;
-		private PlayerEntity entity;
-		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
-			super(container, inventory, text);
-			this.world = container.world;
-			this.x = container.x;
-			this.y = container.y;
-			this.z = container.z;
-			this.entity = container.entity;
-			this.xSize = 176;
-			this.ySize = 166;
-		}
-		private static final ResourceLocation texture = new ResourceLocation("sobr:textures/scroll_gui.png");
-		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
-		}
-
-		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1, 1, 1, 1);
-			Minecraft.getInstance().getTextureManager().bindTexture(texture);
-			int k = (this.width - this.xSize) / 2;
-			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/spell_night_vision_16.png"));
-			this.blit(this.guiLeft + 25, this.guiTop + 71, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/spell_knockback_16.png"));
-			this.blit(this.guiLeft + 42, this.guiTop + 71, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/soul_end.png"));
-			this.blit(this.guiLeft + 152, this.guiTop + 9, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/soul_nether.png"));
-			this.blit(this.guiLeft + 6, this.guiTop + 27, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/soul_other.png"));
-			this.blit(this.guiLeft + 151, this.guiTop + 27, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/soul_surface.png"));
-			this.blit(this.guiLeft + 6, this.guiTop + 9, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/blank_scroll.png"));
-			this.blit(this.guiLeft + 79, this.guiTop + 31, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/scroll_table_1.png"));
-			this.blit(this.guiLeft + 44, this.guiTop + 0, 0, 0, 32, 32, 32, 32);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/scroll_table_2.png"));
-			this.blit(this.guiLeft + 107, this.guiTop + 0, 0, 0, 32, 32, 32, 32);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/knowledge_book.png"));
-			this.blit(this.guiLeft + 34, this.guiTop + -18, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/scroll_table_3.png"));
-			this.blit(this.guiLeft + 58, this.guiTop + -27, 0, 0, 64, 32, 64, 32);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("sobr:textures/knowledge_book.png"));
-			this.blit(this.guiLeft + 118, this.guiTop + -18, 0, 0, 16, 16, 16, 16);
-		}
-
-		@Override
-		public void tick() {
-			super.tick();
-		}
-
-		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-		}
-
-		@Override
-		public boolean keyPressed(int key, int b, int c) {
-			if (key == 256) {
-				this.minecraft.player.closeScreen();
-				return true;
-			}
-			return super.keyPressed(key, b, c);
-		}
-
-		@Override
-		public void removed() {
-			super.removed();
-			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
-		}
-
-		@Override
-		public void init(Minecraft minecraft, int width, int height) {
-			super.init(minecraft, width, height);
-			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 160, this.guiTop + 56, 7, 20, "»", e -> {
-				SobrMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
-			}));
 		}
 	}
 
@@ -616,7 +518,7 @@ public class ScrollGUIGui extends SobrModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
-	private static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
+	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))

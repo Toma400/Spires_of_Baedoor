@@ -180,6 +180,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -501,7 +505,7 @@
       "registry_name": "spell_overlay_blou"
     },
     {
-      "name": "SpellPotionLumio",
+      "name": "SpellPotionLumioPotionItem",
       "type": "potion",
       "sortid": 57,
       "compiles": true,
@@ -510,7 +514,7 @@
       "registry_name": "spell_potion_lumio"
     },
     {
-      "name": "SpellPotionBlou",
+      "name": "SpellPotionBlouPotionItem",
       "type": "potion",
       "sortid": 58,
       "compiles": true,
@@ -527,7 +531,7 @@
       "ids": {},
       "registry_name": "overlay_spell_condition_lumio",
       "metadata": {
-        "return_type": "LOGIC",
+        "return_type": "logic",
         "dependencies": [
           {
             "name": "entity",
@@ -545,7 +549,7 @@
       "ids": {},
       "registry_name": "overlay_spell_condition_blou",
       "metadata": {
-        "return_type": "LOGIC",
+        "return_type": "logic",
         "dependencies": [
           {
             "name": "entity",
@@ -663,7 +667,7 @@
     },
     {
       "name": "BlouTarget",
-      "type": "gun",
+      "type": "rangeditem",
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
@@ -724,10 +728,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -755,7 +755,7 @@
     },
     {
       "name": "LumioTarget",
-      "type": "gun",
+      "type": "rangeditem",
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
@@ -988,6 +988,60 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "scrollsof_baedoor"
+    },
+    {
+      "name": "SacrificeKnife",
+      "type": "tool",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sacrifice_knife"
+    },
+    {
+      "name": "SacrificeKnifeRecipe",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sacrifice_knife_recipe"
+    },
+    {
+      "name": "SpellPotionLumioPotionItem",
+      "type": "potion",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spell_potion_lumio"
+    },
+    {
+      "name": "SpellPotionLumio",
+      "type": "potioneffect",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spell_potion_lumio"
+    },
+    {
+      "name": "SpellPotionBlouPotionItem",
+      "type": "potion",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spell_potion_blou"
+    },
+    {
+      "name": "SpellPotionBlou",
+      "type": "potioneffect",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spell_potion_blou"
     }
   ],
   "variable_elements": [
@@ -1041,14 +1095,15 @@
       "block.sobr.glistering_ice": "Glistering Ice",
       "item.sobr.scroll_blou_self_iii": "Blou",
       "item.sobr.scroll_lumio_field_i": "Lumio",
-      "block.sobr.empty_runic_stone": "Empty Runic Stone",
       "item.sobr.scroll_blou_target_i": "Blou",
+      "block.sobr.empty_runic_stone": "Empty Runic Stone",
       "effect.spell_potion_lumio": "Spell Potion Lumio",
       "block.sobr.runic_stone_earth": "Earth Runic Stone",
       "block.sobr.smooth_runic_stone": "Smooth Runic Stone",
       "item.sobr.scroll_lumio_target_i": "Lumio",
       "item.minecraft.splash_potion.effect.spell_potion_lumio": "Splash Spell Potion Lumio",
       "block.sobr.scroll_table": "Scroll Table",
+      "item.sobr.sacrifice_knife": "Sacrifice Knife",
       "item.sobr.surface_soul": "Surface Soul",
       "item.sobr.scroll_blou_self_ii": "Blou",
       "item.minecraft.potion.effect.spell_potion_blou": "Spell Potion Lumio",
@@ -1079,6 +1134,10 @@
       "item.sobr.scroll_lumio_self_ii": "Lumio"
     }
   },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
   "workspaceSettings": {
     "modid": "sobr",
     "modName": "Spires of Baedoor",
@@ -1086,16 +1145,17 @@
     "description": "Standalone expansion for Wastelands of Baedoor mod. Adds a lot more lore elements, magic and herbalist system",
     "author": "Toma400",
     "websiteURL": "https://discord.gg/GbTw9KqnrE",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.14.4",
+    "currentGenerator": "forge-1.16.5",
     "credits": "Toma400 (author), DylanVhs (textures), MCreator (created with)",
     "modElementsPackage": "net.mcreator.sobr",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000547520
+  "mcreatorVersion": 202100236710
 }

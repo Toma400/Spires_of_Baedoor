@@ -2,6 +2,7 @@ package net.mcreator.sobr.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -13,11 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.sobr.potion.SpellPotionLumioPotion;
+import net.mcreator.sobr.potion.SpellPotionLumioPotionEffect;
 import net.mcreator.sobr.item.ScrollLumioFieldIItem;
 import net.mcreator.sobr.item.ScrollLumioFieldIIItem;
 import net.mcreator.sobr.item.ScrollLumioFieldIIIItem;
-import net.mcreator.sobr.SobrModElements;
+import net.mcreator.sobr.SobrMod;
 
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -25,41 +26,36 @@ import java.util.Map;
 import java.util.List;
 import java.util.Comparator;
 
-@SobrModElements.ModElement.Tag
-public class ScrollUseLumioFieldProcedure extends SobrModElements.ModElement {
-	public ScrollUseLumioFieldProcedure(SobrModElements instance) {
-		super(instance, 65);
-	}
-
+public class ScrollUseLumioFieldProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency entity for procedure ScrollUseLumioField!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				System.err.println("Failed to load dependency itemstack for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency itemstack for procedure ScrollUseLumioField!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency x for procedure ScrollUseLumioField!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency y for procedure ScrollUseLumioField!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency z for procedure ScrollUseLumioField!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure ScrollUseLumioField!");
+				SobrMod.LOGGER.warn("Failed to load dependency world for procedure ScrollUseLumioField!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -69,18 +65,18 @@ public class ScrollUseLumioFieldProcedure extends SobrModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double personal_level = 0;
-		if (!world.getWorld().isRemote) {
-			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.ambient.short")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1);
 		} else {
-			world.getWorld().playSound(x, y, z,
+			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.ambient.short")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(SpellPotionLumioPotion.potion, (int) 10, (int) 0, (false), (false)));
-		if (((itemstack).getItem() == new ItemStack(ScrollLumioFieldIItem.block, (int) (1)).getItem())) {
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(SpellPotionLumioPotionEffect.potion, (int) 10, (int) 0, (false), (false)));
+		if (((itemstack).getItem() == ScrollLumioFieldIItem.block)) {
 			{
 				List<Entity> _entfound = world
 						.getEntitiesWithinAABB(Entity.class,
@@ -96,7 +92,7 @@ public class ScrollUseLumioFieldProcedure extends SobrModElements.ModElement {
 								.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 300, (int) 1, (false), (false)));
 				}
 			}
-		} else if (((itemstack).getItem() == new ItemStack(ScrollLumioFieldIIItem.block, (int) (1)).getItem())) {
+		} else if (((itemstack).getItem() == ScrollLumioFieldIIItem.block)) {
 			{
 				List<Entity> _entfound = world
 						.getEntitiesWithinAABB(Entity.class,
@@ -112,7 +108,7 @@ public class ScrollUseLumioFieldProcedure extends SobrModElements.ModElement {
 								.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, (int) 600, (int) 1, (false), (false)));
 				}
 			}
-		} else if (((itemstack).getItem() == new ItemStack(ScrollLumioFieldIIIItem.block, (int) (1)).getItem())) {
+		} else if (((itemstack).getItem() == ScrollLumioFieldIIIItem.block)) {
 			{
 				List<Entity> _entfound = world
 						.getEntitiesWithinAABB(Entity.class,

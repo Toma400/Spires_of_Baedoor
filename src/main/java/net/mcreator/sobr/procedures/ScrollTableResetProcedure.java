@@ -7,21 +7,16 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.sobr.SobrModElements;
+import net.mcreator.sobr.SobrMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 
-@SobrModElements.ModElement.Tag
-public class ScrollTableResetProcedure extends SobrModElements.ModElement {
-	public ScrollTableResetProcedure(SobrModElements instance) {
-		super(instance, 70);
-	}
-
+public class ScrollTableResetProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure ScrollTableReset!");
+				SobrMod.LOGGER.warn("Failed to load dependency entity for procedure ScrollTableReset!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -30,7 +25,7 @@ public class ScrollTableResetProcedure extends SobrModElements.ModElement {
 			if (_current instanceof Supplier) {
 				Object invobj = ((Supplier) _current).get();
 				if (invobj instanceof Map) {
-					ItemStack _setstack = new ItemStack(Blocks.AIR, (int) (1));
+					ItemStack _setstack = new ItemStack(Blocks.AIR);
 					_setstack.setCount((int) 1);
 					((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 					_current.detectAndSendChanges();

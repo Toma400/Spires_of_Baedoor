@@ -22,7 +22,7 @@ public class ScrollsofBaedoorItemGroup extends SobrModElements.ModElement {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(EmptyScrollItem.block, (int) (1));
+				return new ItemStack(EmptyScrollItem.block);
 			}
 
 			@OnlyIn(Dist.CLIENT)

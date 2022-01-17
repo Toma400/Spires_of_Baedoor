@@ -7,21 +7,16 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.sobr.SobrModElements;
+import net.mcreator.sobr.SobrMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 
-@SobrModElements.ModElement.Tag
-public class OutputClearanceProcedure extends SobrModElements.ModElement {
-	public OutputClearanceProcedure(SobrModElements instance) {
-		super(instance, 51);
-	}
-
+public class OutputClearanceProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure OutputClearance!");
+				SobrMod.LOGGER.warn("Failed to load dependency entity for procedure OutputClearance!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

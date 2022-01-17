@@ -1,8 +1,8 @@
 package net.mcreator.sobr.procedures;
 
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
@@ -40,23 +40,38 @@ import net.mcreator.sobr.item.ScrollBlouSelfIIIItem;
 import net.mcreator.sobr.item.NetherSoulItem;
 import net.mcreator.sobr.item.EndSoulItem;
 import net.mcreator.sobr.item.EmptyScrollItem;
-import net.mcreator.sobr.SobrModElements;
+import net.mcreator.sobr.SobrMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-@SobrModElements.ModElement.Tag
-public class ScrollTableUseProcedure extends SobrModElements.ModElement {
-	public ScrollTableUseProcedure(SobrModElements instance) {
-		super(instance, 50);
-		MinecraftForge.EVENT_BUS.register(this);
+public class ScrollTableUseProcedure {
+	@Mod.EventBusSubscriber
+	private static class GlobalTrigger {
+		@SubscribeEvent
+		public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+			if (event.phase == TickEvent.Phase.END) {
+				Entity entity = event.player;
+				World world = entity.world;
+				double i = entity.getPosX();
+				double j = entity.getPosY();
+				double k = entity.getPosZ();
+				Map<String, Object> dependencies = new HashMap<>();
+				dependencies.put("x", i);
+				dependencies.put("y", j);
+				dependencies.put("z", k);
+				dependencies.put("world", world);
+				dependencies.put("entity", entity);
+				dependencies.put("event", event);
+				executeProcedure(dependencies);
+			}
+		}
 	}
-
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure ScrollTableUse!");
+				SobrMod.LOGGER.warn("Failed to load dependency entity for procedure ScrollTableUse!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -76,7 +91,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (0))).getItem() == new ItemStack(Items.LAPIS_LAZULI, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (0))).getItem() == Items.LAPIS_LAZULI) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -90,7 +105,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (11))).getItem() == new ItemStack(EmptyScrollItem.block, (int) (1)).getItem())) && (((((new Object() {
+			}.getItemStack((int) (11))).getItem() == EmptyScrollItem.block)) && (((((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -104,7 +119,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (1))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (1))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -118,7 +133,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())) && (((new Object() {
+			}.getItemStack((int) (2))).getItem() == Blocks.AIR.asItem())) && (((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -132,7 +147,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (3))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -146,7 +161,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (4))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()))) && (((new Object() {
+			}.getItemStack((int) (4))).getItem() == Blocks.AIR.asItem()))) && (((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -160,7 +175,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (5))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (5))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -174,7 +189,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (6))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()))))) {
+			}.getItemStack((int) (6))).getItem() == Blocks.AIR.asItem()))))) {
 				if (((((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
@@ -189,7 +204,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (7))).getItem() == new ItemStack(SurfaceSoulItem.block, (int) (1)).getItem()) || ((new Object() {
+				}.getItemStack((int) (7))).getItem() == SurfaceSoulItem.block) || ((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -203,7 +218,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (8))).getItem() == new ItemStack(NetherSoulItem.block, (int) (1)).getItem())) || (((new Object() {
+				}.getItemStack((int) (8))).getItem() == NetherSoulItem.block)) || (((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -217,7 +232,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (9))).getItem() == new ItemStack(EndSoulItem.block, (int) (1)).getItem()) || ((new Object() {
+				}.getItemStack((int) (9))).getItem() == EndSoulItem.block) || ((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -231,7 +246,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (10))).getItem() == new ItemStack(StrangeSoulItem.block, (int) (1)).getItem())))) {
+				}.getItemStack((int) (10))).getItem() == StrangeSoulItem.block)))) {
 					if (((new Object() {
 						public ItemStack getItemStack(int sltid) {
 							Entity _ent = entity;
@@ -246,7 +261,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack((int) (12))).getItem() == new ItemStack(Items.GLOWSTONE_DUST, (int) (1)).getItem())) {
+					}.getItemStack((int) (12))).getItem() == Items.GLOWSTONE_DUST)) {
 						if ((((new Object() {
 							public ItemStack getItemStack(int sltid) {
 								Entity _ent = entity;
@@ -261,8 +276,8 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 								}
 								return ItemStack.EMPTY;
 							}
-						}.getItemStack((int) (13))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) || (ItemTags.getCollection()
-								.getOrCreate(new ResourceLocation(("forge:scroll_gem_self").toLowerCase(java.util.Locale.ENGLISH)))
+						}.getItemStack((int) (13))).getItem() == Blocks.AIR.asItem()) || (ItemTags.getCollection()
+								.getTagByID(new ResourceLocation(("forge:scroll_gem_self").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((new Object() {
 									public ItemStack getItemStack(int sltid) {
 										Entity _ent = entity;
@@ -299,7 +314,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioSelfIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioSelfIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -327,7 +342,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioSelfIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioSelfIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -355,7 +370,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioSelfIIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioSelfIIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -383,7 +398,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioSelfIVItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioSelfIVItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -411,7 +426,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioSelfVItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioSelfVItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -420,7 +435,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 								}
 							}
 						} else if ((ItemTags.getCollection()
-								.getOrCreate(new ResourceLocation(("forge:scroll_gem_target").toLowerCase(java.util.Locale.ENGLISH)))
+								.getTagByID(new ResourceLocation(("forge:scroll_gem_target").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((new Object() {
 									public ItemStack getItemStack(int sltid) {
 										Entity _ent = entity;
@@ -457,7 +472,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioTargetIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioTargetIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -485,7 +500,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioTargetIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioTargetIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -513,7 +528,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioTargetIIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioTargetIIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -541,7 +556,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioTargetIVItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioTargetIVItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -569,7 +584,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioTargetVItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioTargetVItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -578,7 +593,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 								}
 							}
 						} else if ((ItemTags.getCollection()
-								.getOrCreate(new ResourceLocation(("forge:scroll_gem_field").toLowerCase(java.util.Locale.ENGLISH)))
+								.getTagByID(new ResourceLocation(("forge:scroll_gem_field").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((new Object() {
 									public ItemStack getItemStack(int sltid) {
 										Entity _ent = entity;
@@ -615,7 +630,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioFieldIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioFieldIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -643,7 +658,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioFieldIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioFieldIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -671,7 +686,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollLumioFieldIIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollLumioFieldIIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -696,7 +711,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (1))).getItem() == new ItemStack(Items.LAPIS_LAZULI, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (1))).getItem() == Items.LAPIS_LAZULI) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -710,7 +725,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (11))).getItem() == new ItemStack(EmptyScrollItem.block, (int) (1)).getItem())) && (((((new Object() {
+			}.getItemStack((int) (11))).getItem() == EmptyScrollItem.block)) && (((((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -724,7 +739,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (0))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (0))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -738,7 +753,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())) && (((new Object() {
+			}.getItemStack((int) (2))).getItem() == Blocks.AIR.asItem())) && (((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -752,7 +767,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (3))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (3))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -766,7 +781,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (4))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()))) && (((new Object() {
+			}.getItemStack((int) (4))).getItem() == Blocks.AIR.asItem()))) && (((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -780,7 +795,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (5))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+			}.getItemStack((int) (5))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -794,7 +809,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack((int) (6))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()))))) {
+			}.getItemStack((int) (6))).getItem() == Blocks.AIR.asItem()))))) {
 				if (((((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
@@ -809,7 +824,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (7))).getItem() == new ItemStack(SurfaceSoulItem.block, (int) (1)).getItem()) && ((new Object() {
+				}.getItemStack((int) (7))).getItem() == SurfaceSoulItem.block) && ((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -823,7 +838,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (8))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())) && (((new Object() {
+				}.getItemStack((int) (8))).getItem() == Blocks.AIR.asItem())) && (((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -837,7 +852,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (9))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) && ((new Object() {
+				}.getItemStack((int) (9))).getItem() == Blocks.AIR.asItem()) && ((new Object() {
 					public ItemStack getItemStack(int sltid) {
 						Entity _ent = entity;
 						if (_ent instanceof ServerPlayerEntity) {
@@ -851,7 +866,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 						}
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack((int) (10))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())))) {
+				}.getItemStack((int) (10))).getItem() == Blocks.AIR.asItem())))) {
 					if (((new Object() {
 						public ItemStack getItemStack(int sltid) {
 							Entity _ent = entity;
@@ -866,7 +881,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 							}
 							return ItemStack.EMPTY;
 						}
-					}.getItemStack((int) (12))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem())) {
+					}.getItemStack((int) (12))).getItem() == Blocks.AIR.asItem())) {
 						if ((((new Object() {
 							public ItemStack getItemStack(int sltid) {
 								Entity _ent = entity;
@@ -881,8 +896,8 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 								}
 								return ItemStack.EMPTY;
 							}
-						}.getItemStack((int) (13))).getItem() == new ItemStack(Blocks.AIR, (int) (1)).getItem()) || (ItemTags.getCollection()
-								.getOrCreate(new ResourceLocation(("forge:scroll_gem_self").toLowerCase(java.util.Locale.ENGLISH)))
+						}.getItemStack((int) (13))).getItem() == Blocks.AIR.asItem()) || (ItemTags.getCollection()
+								.getTagByID(new ResourceLocation(("forge:scroll_gem_self").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((new Object() {
 									public ItemStack getItemStack(int sltid) {
 										Entity _ent = entity;
@@ -919,7 +934,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouSelfIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouSelfIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -947,7 +962,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouSelfIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouSelfIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -975,7 +990,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouSelfIIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouSelfIIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -984,7 +999,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 								}
 							}
 						} else if ((ItemTags.getCollection()
-								.getOrCreate(new ResourceLocation(("forge:scroll_gem_target").toLowerCase(java.util.Locale.ENGLISH)))
+								.getTagByID(new ResourceLocation(("forge:scroll_gem_target").toLowerCase(java.util.Locale.ENGLISH)))
 								.contains((new Object() {
 									public ItemStack getItemStack(int sltid) {
 										Entity _ent = entity;
@@ -1021,7 +1036,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouTargetIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouTargetIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -1049,7 +1064,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouTargetIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouTargetIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -1077,7 +1092,7 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 									if (_current instanceof Supplier) {
 										Object invobj = ((Supplier) _current).get();
 										if (invobj instanceof Map) {
-											ItemStack _setstack = new ItemStack(ScrollBlouTargetIIIItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(ScrollBlouTargetIIIItem.block);
 											_setstack.setCount((int) 1);
 											((Slot) ((Map) invobj).get((int) (14))).putStack(_setstack);
 											_current.detectAndSendChanges();
@@ -1089,25 +1104,6 @@ public class ScrollTableUseProcedure extends SobrModElements.ModElement {
 					}
 				}
 			}
-		}
-	}
-
-	@SubscribeEvent
-	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			Entity entity = event.player;
-			World world = entity.world;
-			double i = entity.posX;
-			double j = entity.posY;
-			double k = entity.posZ;
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			this.executeProcedure(dependencies);
 		}
 	}
 }
