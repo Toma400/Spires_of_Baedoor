@@ -21,6 +21,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+import toma400.sobr.core.SobrItems;
 
 import static toma400.sobr.Sobr.MOD_ID;
 
@@ -32,9 +33,11 @@ public class Sobr
 
     public Sobr()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::setup);
+        eventBus.addListener(this::setup);
+
+        SobrItems.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
