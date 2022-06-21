@@ -11,13 +11,13 @@ authors="Toma400"
 description='''
 Mod treating on magic and herbalism, allowing you to create powerful spells based upon Baedoor magic. Part of Baedoor mods, alongside Wastelands of Baedoor and Civilisations of Baedoor.
 '''
-[[dependencies.examplemod]]
+[[dependencies.sobr]]
     modId="forge"
     mandatory=true
     versionRange="[41,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.sobr]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19,1.20)"

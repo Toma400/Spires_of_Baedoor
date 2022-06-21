@@ -104,7 +104,6 @@ jar {
         ])
     }
 }
-
 // Example configuration to allow publishing using the maven-publish plugin
 // This is the preferred method to reobfuscate your jar file
 jar.finalizedBy('reobfJar')
