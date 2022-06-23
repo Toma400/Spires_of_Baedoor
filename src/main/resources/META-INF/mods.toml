@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Baedoor Mod License"
+[[mods]]
+modId="sobr"
+version="${file.jarVersion}"
+displayName="Spires of Baedoor"
+logoFile="sobr.png"
+credits="Toma400 - code, DylanVHS - textures"
+authors="Toma400"
+description='''
+Mod treating on magic and herbalism, allowing you to create powerful spells based upon Baedoor magic. Part of Baedoor mods, alongside Wastelands of Baedoor and Civilisations of Baedoor.
+'''
+[[dependencies.sobr]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sobr]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
