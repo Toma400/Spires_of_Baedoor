@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[40,)"
 license="Baedoor Mod License"
 [[mods]]
 modId="sobr"
@@ -14,12 +14,12 @@ Mod treating on magic and herbalism, allowing you to create powerful spells base
 [[dependencies.sobr]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.sobr]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"

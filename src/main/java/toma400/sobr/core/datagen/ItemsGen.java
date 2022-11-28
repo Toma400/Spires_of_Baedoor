@@ -31,7 +31,7 @@ public class ItemsGen extends ItemModelProvider {
     public void ItemRegistrar(Collection<RegistryObject<Item>> items) {
         for (RegistryObject<Item> item : items) {
             if (!(item.get() instanceof BlockItem)) { // delegates all possible blockItems to another builder
-                String name = item.getId().getPath();
+                String    name      = item.getId().getPath();
                 ModelFile modelType = getExistingFile(mcLoc("item/generated"));
                 if (item.get() instanceof TieredItem) {
                     modelType = getExistingFile(mcLoc("item/handheld"));
