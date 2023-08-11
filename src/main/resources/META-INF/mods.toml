@@ -1,0 +1,33 @@
+modLoader     = "javafml"
+loaderVersion = "${loader_version_range}"
+license       = "${mod_license}"
+
+[[mods]]
+    modId       = "sobr"
+    version     = "${mod_version}"
+    displayName = "Spires of Baedoor"
+    authors     = "Toma400 - author, DylanVHS - textures"
+    description = '''
+    ${mod_description}
+    '''
+
+[[dependencies.sobr]]
+    modId        = "forge"
+    mandatory    = true
+    versionRange = "${forge_version_range}"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+[[dependencies.sobr]]
+    modId        = "minecraft"
+    mandatory    = true
+    versionRange = "${minecraft_version_range}"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+[[dependencies.sobr]]
+    modId        = "baedoorlib"
+    mandatory    = true
+    versionRange = "[0.ca1,)"
+    ordering     = "NONE"
+    side         = "BOTH"
